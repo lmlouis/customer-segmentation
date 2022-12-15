@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import pickle
 from prediction_function.module import ciblage, chiffre_affaire,collect_parametres
 
 with open("css/style.css") as f:
