@@ -11,9 +11,9 @@ Application de déploiement de modèle de machine learning basé sur le concept 
 
 ---
 
-## Architecutre
+## Architecture
 ![](architechture.png) 
-## Fonctionalités Principales 
+## Fonctionnalités Principales 
 * **Cibler le marché** le plus remptable selon le la 
 localisation du client lors de la transaction
 ![](img1.png)
