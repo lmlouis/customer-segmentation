@@ -10,6 +10,9 @@ Application de déploiement de modèle de machine learning basé sur le concept 
 * scikit learn
 
 ---
+
+## Architecutre
+![](architechture.png) 
 ## Fonctionalités Principales 
 * **Cibler le marché** le plus remptable selon le la 
 localisation du client lors de la transaction
@@ -30,3 +33,10 @@ localisation du client lors de la transaction
 
 * dependances : `pip freeze > requirements.txt`
 * installer les dependances `pip install -r requirements.txt`
+
+
+# Liens utiles : 
+
+* Mon Notebook de machine learning : [Customer_Segmentation.ipynb](https://github.com/lmlouis/IntroductionIA/blob/main/Customer_Segmentation.ipynb)
+* Steamlit : [streamlit.io](https://streamlit.io/)
+  
