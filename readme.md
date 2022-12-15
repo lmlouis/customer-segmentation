@@ -1,6 +1,6 @@
 # Customer Segmentation
 Application de déploiement de modèle de machine learning basé sur le concept de segmentation du marché.
-
+![](background.jpg)
 ## pré-requis:
 
 * Python

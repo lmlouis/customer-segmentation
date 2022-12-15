@@ -6,13 +6,25 @@ from prediction_function.module import ciblage, chiffre_affaire,collect_parametr
 with open("css/style.css") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
- 
-st.title('costumer Segmention')
+
+IMAGE_URL = "background.jpg"
+
+st.image(IMAGE_URL)
+
+st.write(
+    """
+    ### Costumer Segmentation:
+    #### Application de deploiment de modèle de machine learning
+    #### basé sur le concept de segmentation du marché.
+    Autheur: WORA SOUAMY Louis Martin (@lmlouis) copyright 2022.
+    
+    Github Repository : https://github.com/lmlouis/customer-segmentation
+    
+    Notebook Modele :https://github.com/lmlouis/IntroductionIA/blob/main/Customer_Segmentation.ipynb
+"""
+)
+st.title('Fonctionalités Principales')
 st.write('''
-         ### Application de deploiment de modèle de machine learning
-         ### basé sur le concept de segmentation du marché. 
-         
-        ## Fonctionalités Principales 
         * **Cibler le marché** le plus remptable selon le la localisation du client lors de la transaction
         * **Prédir le chiffre d'affaire** d'une quantité de Transaction d'un produit effectué par un client 
          ''')
