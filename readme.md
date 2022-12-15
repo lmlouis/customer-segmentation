@@ -38,5 +38,5 @@ localisation du client lors de la transaction
 # Liens utiles : 
 
 * Mon Notebook de machine learning : [Customer_Segmentation.ipynb](https://github.com/lmlouis/IntroductionIA/blob/main/Customer_Segmentation.ipynb)
-* Steamlit : [streamlit.io](https://streamlit.io/)
+* Streamlit : [streamlit.io](https://streamlit.io/)
   
