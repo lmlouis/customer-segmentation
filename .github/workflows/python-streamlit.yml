@@ -2,12 +2,12 @@
 
 name: Python Streamlit App CI/CD
 
-on:
-  release:
-    types: [published]
+on: 
+  push:
+    branches:
+    - main
+    - release/*
 
-permissions:
-  contents: read
 
 jobs:
   deploy:
