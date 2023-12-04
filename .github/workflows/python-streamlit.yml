@@ -1,27 +1,32 @@
-
-
 name: Python Streamlit App CI/CD
 
-on: 
+on:
   push:
     branches:
     - main
     - release/*
 
-
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.x'
+
+    - name: Install Pipenv
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+
     - name: Install dependencies
       run: pipenv install -r Pipfile
-    - name: Build package
-      run: streamlit run app.py
+      env:
+        PIPENV_VENV_IN_PROJECT: 1  # To ensure that the virtual environment is created within the project directory
 
+    - name: Build package
+      run: pipenv run streamlit run app.py
