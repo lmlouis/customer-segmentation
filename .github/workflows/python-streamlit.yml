@@ -24,7 +24,7 @@ jobs:
         pip install pipenv
 
     - name: Install dependencies
-      run: pipenv install -r Pipfile
+      run: pipenv install 
       env:
         PIPENV_VENV_IN_PROJECT: 1  # To ensure that the virtual environment is created within the project directory
 
