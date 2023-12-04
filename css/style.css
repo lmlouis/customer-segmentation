@@ -79,3 +79,447 @@ li {
 .blinking-text {
   animation: blink 1s infinite;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.pageContainer {
+  width: 100%;
+  flex: 1;
+  margin-top: 20px; /* Adjusted margin for spacing */
+  
+  @media screen and (min-width: 768px) {
+    max-width: 5xl;
+  }
+
+  &.justifyCenter {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px; /* Make up for the header size */
+
+    h2 {
+      font-size: 3xl;
+      font-weight: bold;
+    }
+
+    & > p {
+      padding-top: 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pageContainer.justifyCenter {
+    max-width: 3xl;
+  }
+}
+
+.toasterIcon {
+  margin-right: 2px;
+
+  path {
+    fill: currentColor; /* Assuming you want to inherit the text color */
+  }
+}
+
+
+.header {
+  z-index: 0;
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+  height: 12px;
+
+  @media (min-width: 768px) {
+    margin-top: 2px;
+    margin-left: 12px;
+  }
+
+  h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 4px;
+      width: auto;
+    }
+
+    .betaTag {
+      font-size: base;
+      color: #001219;
+      padding-left: 2px;
+      font-weight: normal;
+      padding-top: 3px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      display: flex;
+      color: #001219;
+
+      button {
+        border-radius: 4px;
+      }
+    }
+
+    li.upgrade {
+      font-family: sans-serif;
+      font-size: base;
+      line-height: none;
+
+      button {
+        font-weight: normal;
+        color: #001219;
+        padding: 1px;
+        outline: none;
+        border-radius: 4px;
+      }
+
+      &:hover {
+        button {
+          background-color: #e5e5e5;
+        }
+      }
+
+      @media (min-width: 768px) {
+        button {
+          padding: 2px;
+        }
+      }
+    }
+  }
+}
+
+.navMenu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 8px;
+  position: relative;
+  top: 0.5px;
+}
+
+.withDivider {
+  padding-left: 1px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    margin-left: 2px;
+    border-left: 1px solid #001219;
+  }
+}
+
+.navAction {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: base;
+  padding: 1px;
+  margin-left: 1px;
+
+  @media (min-width: 768px) {
+    padding: 2px;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px #001219;
+  }
+
+  img {
+    border-radius: 50%;
+    border: 1px solid #001219;
+    height: 25px;
+    width: 25px;
+
+    @media (min-width: 768px) {
+      margin-right: 2px;
+    }
+  }
+
+  &.hideOnMobile {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+}
+
+.closeButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: none;
+  padding: 3px;
+}
+
+.closeButton svg {
+  animation: spin 500ms;
+}
+
+.disableLink {
+  pointer-events: none;
+}
+
+.iconAlert {
+  width: 5px;
+  height: 5px;
+  margin-right: 1px;
+}
+
+.continueTo {
+  font-size: base;
+}
+
+.hideOnMobile {
+  display: none;
+
+  @media (min-width: 640px) {
+    display: inline;
+  }
+}
+
+.externalLink {
+  margin-left: 2px;
+  padding-bottom: 6px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.menuIcon {
+  width: 6px;
+  height: 6px;
+  position: relative;
+  top: 0.5px;
+}
+
+.openMenuButtonContainer {
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.openMenuButton {
+  display: flex;
+  flex-direction: row;
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.openMenuButtonWarningIcon {
+  width: 5px;
+  height: 5px;
+  position: relative;
+  left: 3px;
+  top: 1px;
+  z-index: 10;
+}
+
+.externalLinkNavigation {
+  display: none;
+
+  @media (min-width: 768px) {
+    z-index: 10;
+    display: flex;
+    flex: auto;
+    justify-content: flex-start;
+    position: relative;
+    top: 0.5px;
+    height: 8px;
+    padding-left: 2px;
+  }
+}
+
+.externalLinkList {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.burgerMenuPopoverContainer {
+  border: 1px solid #001219;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #001219;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burgerMenuPopoverMenu {
+  border-bottom: 1px solid #646464;
+  padding: 2px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.iconWarning {
+  width: 5px;
+  height: 5px;
+  margin-right: 1px;
+  position: relative;
+  bottom: 0.5px;
+}
+
+.burgerMenuListElement {
+  width: 40px;
+  padding: 6px;
+  margin: 2px;
+  font-size: base;
+  line-height: 4;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+$min-sidebar-width: 768px; // Correspond aux remplacements modaux
+
+.sideNavigationContainer {
+  @apply h-full;
+
+  & ~ button {
+    @apply mr-2;
+  }
+
+  @media (min-width: $min-sidebar-width) {
+    @apply grid;
+    grid-template-columns: 260px auto;
+  }
+}
+
+.sideNavigationMenuContainer {
+  @apply bg-black-100;
+  @apply border-b border-black-400;
+  @apply z-10;
+
+  // Rend le Modal Header collant pour qu'il ne défile pas
+  @apply flex flex-col overflow-hidden;
+
+  @media (min-width: $min-sidebar-width) {
+    // Repositionne la bordure du menu (bas → droite).
+    @apply border-b-0;
+    @apply border-r border-black-400;
+  }
+}
+
+.itemList {
+  overflow: overlay;
+}
+
+.sideNavigationBodyContainer {
+  @apply relative;
+
+  // 1. "overflow: scroll" crée un espace vide pour la barre de défilement dans les navigateurs
+  //    qui utilisent Webkit ou Blink (dans les navigateurs qui utilisent Gecko, la barre de défilement est superposée par défaut).
+  // 2. "overflow: overlay" supprime cet espace vide et force la barre de défilement à se superposer.
+  //    REMARQUE : Les navigateurs qui utilisent Gecko ne prennent PAS en charge la propriété "overlay".
+  // HACK : utilisez "overflow: scroll" suivi de "overflow: overlay".
+  // Cela définira la propriété overflow sur "overlay" dans les navigateurs qui le prennent en charge,
+  // et la définira sur "scroll" dans les autres.
+  overflow: scroll;
+  overflow: overlay;
+}
+
+.header {
+  @apply mt-6 #{!important};
+}
+
+.title {
+  @apply font-normal leading-9;
+}
+
+.subTitle {
+  @apply text-sm text-black-700 font-normal leading-4;
+}
+
+.topFade {
+  @apply hidden;
+
+  @media (min-width: $min-sidebar-width) {
+    @apply z-10;
+    @apply block;
+    @apply absolute;
+    @apply h-8;
+    @apply w-full;
+    @apply top-0;
+    @apply bg-gradient-to-b from-white;
+  }
+}
+
+.bottomFade {
+  @apply hidden;
+
+  @media (min-width: $min-sidebar-width) {
+    @apply block;
+    @apply absolute;
+    @apply h-8;
+    @apply w-full;
+    @apply bottom-0;
+    @apply bg-gradient-to-t from-white;
+  }
+}
+
