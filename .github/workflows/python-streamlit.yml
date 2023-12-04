@@ -24,7 +24,7 @@ jobs:
         pip install pipenv
 
     - name: Install Streamlit 
-      run: pipenv install streamlit
+      run: pip install streamlit
       
     - name: Install dependencies
       run: pipenv install 
