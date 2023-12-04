@@ -29,4 +29,4 @@ jobs:
         PIPENV_VENV_IN_PROJECT: 1  # To ensure that the virtual environment is created within the project directory
 
     - name: Build package
-      run: pipenv run streamlit run app.py
+      run: streamlit run app.py
