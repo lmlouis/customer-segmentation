@@ -21,34 +21,13 @@ def main():
     st.sidebar.image(logo)
 
     # code project
-    st.write(
-        """
-        ### Costumer Segmentation:
-        #### Application de deploiment de modèle de machine learning
-        #### basé sur le concept de segmentation du marché.
-        Autheur: WORA SOUAMY Louis Martin (@lmlouis) copyright 2022.
-        
-        Github Repository : https://github.com/lmlouis/customer-segmentation
-        
-        Notebook Modele :https://github.com/lmlouis/IntroductionIA/blob/main/Customer_Segmentation.ipynb
-    """
-    )
-    st.title('Fonctionalités Principales')
     st.write('''
             * **Cibler le marché** le plus remptable selon le la localisation du client lors de la transaction
             * **Prédir le chiffre d'affaire** d'une quantité de Transaction d'un produit effectué par un client 
              ''')
     
-    
-    
-    
     st.sidebar.header('''Paramètres :''')
     df = collect_parametres(st, pd)
-    
-    
-    
-    
-    
     
     st.subheader('1 - Cibler le marché selon la situation géographique du client')
     st.write('''
@@ -76,7 +55,18 @@ def main():
     
     
     chiffre_affaire(pickle, st, df)
-
+    st.write(
+        """
+        ### Costumer Segmentation
+        #### Application de deploiment de modèle de machine learning
+        #### basé sur le concept de segmentation du marché.
+        Autheur: WORA SOUAMY Louis Martin (@lmlouis) copyright 2022.
+        
+        Github Repository : https://github.com/lmlouis/customer-segmentation
+        
+        Notebook Modele :https://github.com/lmlouis/IntroductionIA/blob/main/Customer_Segmentation.ipynb
+    """
+    )
 
 
 if __name__ == '__main__':
