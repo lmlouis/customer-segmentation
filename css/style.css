@@ -1,7 +1,78 @@
 body {
-  /*background: #353535; */
-  line-height: 1.2rem;
+    background: #001219; /* Bleu foncé */
+    line-height: 1.2rem;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    color: #bbe1fa; /* Texte en bleu clair */
 }
+
+footer {
+    visibility: hidden;
+}
+
+/* Form */
+.css-1h109da {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+/* Styles spécifiques pour les animations */
+/* Animation d'apparition pour les éléments avec la classe StatusWidget */
+.StatusWidget-enter-done,
+.StatusWidget-enter-active,
+.StatusWidget-enter,
+.StatusWidget-exit-active,
+.StatusWidget-exit,
+.StatusWidget-exit-done {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Styles spécifiques pour le loader */
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #00B7C2; /* Bleu vif */
+}
+
+/* ... autres styles ... */
+
+/* Select Box */
+.stSelectbox > label {
+    background-color: #00B7C2; /* Bleu vif */
+    position: absolute;
+    left: 0;
+    padding: 0.31rem;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    z-index: 1;
+    min-width: 5.5rem;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff; /* Texte en blanc */
+}
+
+/* ... autres styles ... */
+
+/* MENU && FOOTER */
+#MainMenu {
+    visibility: hidden;
+}
+
+/* Animation pour les éléments avec la classe StatusWidget */
+.StatusWidget-enter-done > div > span {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ... autres styles ... */
 
 footer {visibility: hidden;}
 
@@ -26,17 +97,7 @@ footer {visibility: hidden;}
     visibility: hidden;
 }
 
-.title:before{
-content: 'TEST';
-}
 
-.title:after{
-    content: 'TEST';
-    }
-
-.title{
-    content: 'TEST';
-    }
 .StatusWidget-enter{
     visibility: hidden;
 }
