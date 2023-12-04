@@ -18,13 +18,8 @@ def main():
     # Logo
     dir_root = os.path.dirname(os.path.abspath(__file__))
     logo = Image.open(dir_root+'/logo-lm.png')
-    # Selecting a job
-    # st.sidebar.image(logo)
-    st.sidebar.selectbox('Select',('loren','Ipsum'))
-    st.sidebar.multiselect('Multi',('loren','Ipsum'))
-    st.sidebar.date_input('Date')
-    st.sidebar.text_input('Text')
-    st.sidebar.slider('Slider',min_value=5,max_value=20)
+
+
     # code project
     st.write(
         """
