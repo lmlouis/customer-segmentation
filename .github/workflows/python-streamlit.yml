@@ -21,7 +21,7 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: pipenv install -r Pipfile
     - name: Build package
       run: streamlit run app.py
 
