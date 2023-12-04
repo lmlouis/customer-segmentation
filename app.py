@@ -13,12 +13,12 @@ def main():
     utl.set_page_title('Costumer Segmentation')
     st.set_option('deprecation.showPyplotGlobalUse', False)
     # Loading CSS
-    utl.local_css("css/style.css")
+    utl.local_css("../css/style.css")
     utl.remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
     # Logo
     dir_root = os.path.dirname(os.path.abspath(__file__))
     logo = Image.open(dir_root+'/logo-lm.png')
-
+    st.sidebar.image(logo)
 
     # code project
     st.write(
