@@ -23,6 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
 
+    - name: Install Streamlit 
+      run: pipenv install streamlit
+      
     - name: Install dependencies
       run: pipenv install 
       env:
